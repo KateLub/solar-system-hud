@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+
+  /* PANEL */
+  .scene-panel {
+    flex:1;
+    /*background: rgba(5, 10, 21, 0.85);*/
+    background: rgba(5, 10, 21, 0.85);
+    border: 1px solid rgba(0, 243, 255, 0.25);
+    border-radius: 6px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    color: white;
+    overflow: hidden;
+    margin-left : 10px;
+    margin-right: 10px;
+  }
+
+  .label-style {
+    /*absolute text-[10px] font-mono pointer-events-none px-1.5 py-0.5 bg-space-950/90 border border-neon-cyan/30 text-white rounded whitespace-nowrap transition-opacity duration-200*/
+    position: absolute;
+    font-size: 10px;
+    font-family: monospace;
+    pointer-events: none;
+    padding: 2px 6px;   /* py-0.5 px-1.5 */
+    background-color: rgba(2, 6, 23, 0.9); /* Approximation of bg-space-950/90 */
+    border: 1px solid rgba(34, 211, 238, 0.3); /* Approximation of border-neon-cyan/30 */
+    color: white;
+    border-radius: 0.25rem; /* 4px */
+    white-space: nowrap;
+    transition: opacity 200ms;
+  }
+
+  .planet-button {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px;
+  margin-bottom:4px;
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  border-radius: 4px;
+  background: rgba(3, 7, 18, 0.4);
+  color: inherit;
+  display: flex;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.planet-button:hover {
+  border-color: rgba(34, 211, 238, 0.6);
+  background: rgba(34, 211, 238, 0.1);
+}
+
+/* Selected planet */
+.planet-button.selected {
+  border-color: #22d3ee;
+  background: rgba(34, 211, 238, 0.15);
+}
+
+.planet-row {
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.planet-name-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sun-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.planet-name {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.planet-distance {
+  font-size: 10px;
+  color: #64748b;
+}

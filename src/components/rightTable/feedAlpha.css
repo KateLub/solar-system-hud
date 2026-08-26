@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+
+  .alpha-panel {
+    display:flex;
+    flex-direction: column;
+    flex:20;
+    min-height:0;
+    background: rgba(8, 15, 30, 0.9);
+    border: 1px solid rgba(34, 211, 238, 0.3);
+    border-radius: 6px;
+    position: relative;
+    backdrop-filter: blur(12px);
+    overflow: hidden;
+    margin-bottom:10px;
+  }
+
+
+  .orbital-feed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 6px 12px;
+
+  background: rgba(3, 7, 18, 0.8);
+  border-bottom: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+  .alpha-cyan-text {
+    color: #22d3ee;
+    font-family: "Share Tech Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  }
+
+  .alpha-cyan-text2 {
+    color: rgba(34, 211, 238, 0.6);
+    font-family: "Share Tech Mono", monospace;
+  font-size: 9px;
+
+  animation: orbital-feed-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes orbital-feed-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+
+ .orbital-feed-content {
+  background: #000;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .orbital-feed-grid {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  bottom: 8px;
+  left: 8px;
+  border: 1px solid rgba(34, 211, 238, 0.1);
+  pointer-events: none;
+}
+
+.orbital-feed-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  mix-blend-mode: screen;
+}
+
+  .orbital-feed-location {
+  position: absolute;
+
+  top: 8px;
+  left: 8px;
+
+  color: rgba(34, 211, 238, 0.5);
+
+    font-family: "Share Tech Mono", monospace;
+  font-size: 8px;
+
+  pointer-events: none;
+}
+

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+
+  /* PANEL */
+  .index-panel {
+    flex:50;
+    display:flex;
+    flex-direction: column;
+    background: rgba(5, 10, 21, 0.85);
+    border: 1px solid rgba(0, 243, 255, 0.25);
+    border-radius: 6px;
+    padding: 16px 18px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    color: white;
+    overflow: hidden;
+  }
+
+  .index-title-text{
+    font-size: 11px;
+    font-family: "Share Tech Mono", monospace;
+    color: rgba(0, 243, 255, 0.7);
+    letter-spacing: 1px;
+  }
+
+  .planets-list {
+    /*="flex-1 overflow-y-auto flex flex-col gap-1 pr-1"*/
+    min-height:0;
+    margin-top: 10px;
+    padding-right: 4px;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-color:  rgba(0, 243, 255, 0.25) rgba(5, 10, 21, 0.85);
+    scrollbar-width: thin;
+  }
+
+  

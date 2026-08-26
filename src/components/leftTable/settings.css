@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+
+  /* PANEL */
+  .settings-panel {
+    flex:45;
+    background: rgba(5, 10, 21, 0.85);
+    border: 1px solid rgba(0, 243, 255, 0.25);
+    border-radius: 6px;
+    padding: 16px 18px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    color: white;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .settings-label {
+  display: block;
+  font-size: 11px;
+  font-family: "Share Tech Mono", monospace;
+  letter-spacing: 1px;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+  .settings-title-box {
+    /*="text-xs text-neon-cyan/70 mb-1 flex justify-between"*/
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+    font-size: 11px;
+    font-family: "Share Tech Mono", monospace;
+    color: rgba(0, 243, 255, 0.7);
+    letter-spacing: 1px;
+  }
+
+  .date-source-badge {
+  padding: 2px 4px;
+  background: rgba(34, 211, 238, 0.2);
+  color: #22d3ee;
+  font-size: 9px;
+  border-radius: 4px;
+}
+
+
+.date-picker {
+  width: 100%;
+  box-sizing: border-box;
+  background: #030712;
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  color: #22d3ee;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: "Share Tech Mono", monospace;
+  outline: none;
+  margin-bottom:20px;
+}
+
+
+.date-picker:focus {
+  border-color: #22d3ee;
+}
+
+
+.time-warp-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+
+.warp-button {
+  background: #030712;
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  color: #22d3ee;
+  padding: 4px;
+  font-size: 12px;
+  font-family: "Share Tech Mono", monospace;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.warp-button:hover {
+  border-color: #22d3ee;
+  background: rgba(34, 211, 238, 0.1);
+}
+
+
+.warp-speed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom:25px;
+  font-size: 12px;
+  font-family: "Share Tech Mono", monospace;
+  letter-spacing: 1px;
+  color: #94a3b8;
+}
+
+
+.warp-speed-value {
+  color: #22d3ee;
+}
+
+
+.schematics-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+
+.schematic-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-family: "Share Tech Mono", monospace;
+  letter-spacing: 1px;
+  color: #cbd5e1;
+  cursor: pointer;
+}
+
+
+.schematic-option:hover {
+  color: #ffffff;
+}
+
+
+.schematic-checkbox {
+  width: 14px;
+  height: 14px;
+  accent-color: #22d3ee;
+  background: #030712;
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  border-radius: 4px;
+  cursor: pointer;
+}

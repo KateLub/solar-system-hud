@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+
+.container {
+    height:20px;
+    border-top: 1px solid rgba(0, 243, 255, 0.25);
+    padding: 16px 18px;
+    backdrop-filter: blur(10px);
+    color: white;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text-settings {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 11px;
+    margin-top: 4px;
+    color: rgba(200, 220, 255, 0.6);
+    letter-spacing: 1px;
+}
+
+.first-half {
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.green-text {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 11px;
+    margin-top: 4px;
+    color: #00ff66;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.orange-text { 
+    font-family: "Share Tech Mono", monospace;
+    font-size: 11px;
+    margin-top: 4px;
+    color: #ff9f00;
+    letter-spacing: 1px;  
+    font-weight: bold;      
+}
+
+.blue-text { 
+    font-family: "Share Tech Mono", monospace;
+    font-size: 11px;
+    margin-top: 4px;
+    color: #00f3ff;
+    letter-spacing: 1px;  
+    font-weight: bold;      
+}
