@@ -10,7 +10,7 @@ import Footer from "./components/footer";
 
 export default function App() {
   const [data, setData] = useState<any>(null);
-    const [timeScale, setTimeScale] = useState(1);
+   // const [timeScale, setTimeScale] = useState(1);
 
   useEffect(() => {
 
@@ -55,7 +55,7 @@ export default function App() {
         </div>*/}
 
           
-        <Scene data={data} timeScale={timeScale} />
+        <Scene data={data} />
 
         <div style={{display:"flex", flex: "0.5", flexDirection: "column", minHeight:"0"}} >
           <Target/>

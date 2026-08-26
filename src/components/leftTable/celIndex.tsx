@@ -1,5 +1,5 @@
 import "./celIndex.css";
-import { planets } from "../../data/planets";
+//import { planets } from "../../data/planets";
 
 export default function CelIndex() {
     return (

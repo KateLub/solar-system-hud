@@ -63,11 +63,10 @@ function updateWarpSpeedText(timeWarpSpeed: React.RefObject<number>) {
   text.textContent = `${timeWarpSpeed.current.toFixed(1)}x / DAY`;
 }
 
-export default function Scene({ data, timeScale }: any) {
+export default function Scene({ data}: any) {
   const mountRef = useRef<HTMLDivElement | null>(null);
-  const labelRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  //const labelRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const dataRef = useRef<any>(null);
-  const timeScaleRef = useRef(1);
   const currentDate = useRef(new Date());
   const isPlaying = useRef(true);
   const timeWarpSpeed = useRef(1.0); // days per real-time second
@@ -76,7 +75,7 @@ export default function Scene({ data, timeScale }: any) {
   const showGrid = useRef(false);
   const showLabels = useRef(false);
   const realScale = useRef(false);
-  const lastFetchTime = useRef(0);
+  //const lastFetchTime = useRef(0);
   
   useEffect(() => {
     async function loadEarth() {
@@ -95,11 +94,6 @@ export default function Scene({ data, timeScale }: any) {
   useEffect(() => {
     dataRef.current = data;
   }, [data]);
-
-  useEffect(() => {
-    timeScaleRef.current = timeScale;
-  }, [timeScale]);
-
   
   useEffect(() => {
     if (!mountRef.current) return;
@@ -107,6 +101,7 @@ export default function Scene({ data, timeScale }: any) {
 
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x000000);
+    if (!panel) return;
     const width = panel.clientWidth;
     const height = panel.clientHeight;
 
@@ -274,6 +269,7 @@ export default function Scene({ data, timeScale }: any) {
       label.className = "label-style";
       label.style.borderColor = p.color;
       label.innerHTML = `<span style="color: ${p.color}">●</span> ${p.name.toUpperCase()}`;
+      if (!mountRef.current) return;
       mountRef.current.appendChild(label);
 
       //btn.addEventListener('click', () => selectPlanet(id));
@@ -301,7 +297,7 @@ export default function Scene({ data, timeScale }: any) {
 
     function updateTelemetry() {
       const panel = document.getElementById('telemetry-panel')!;
-      
+      if (!panel) return;
       if (selectedPlanetId.current === "10") {
         // Sun selected
         document.getElementById('target-index')!.textContent = "ID: 10";
@@ -374,6 +370,7 @@ export default function Scene({ data, timeScale }: any) {
           <span class="planet-distance">0.00 AU</span>
       </div>`;
     sunbtn.addEventListener('click', () => selectPlanet("10"));
+    if (!list) return;
     list.appendChild(sunbtn);
 
     Object.keys(planets).map((id) => {
@@ -389,6 +386,7 @@ export default function Scene({ data, timeScale }: any) {
             <span class="planet-distance">${p.a.toFixed(2)} AU</span>
         </div>`;
       btn.addEventListener('click', () => selectPlanet(id));
+      if (!list)return;
       list.appendChild(btn);
       });
     
@@ -472,7 +470,7 @@ const chkOrbits = document.getElementById('chk-orbits') as HTMLInputElement;
     const animate = () => {
       animationFrameId = requestAnimationFrame(animate);
 
-      const api = dataRef.current;
+     // const api = dataRef.current;
       //const planets = api?.planets ?? [];
 
       // Rotate Sun
@@ -544,9 +542,12 @@ const chkOrbits = document.getElementById('chk-orbits') as HTMLInputElement;
           if (tempV.z > 1) {
             meshGroup.label.style.opacity = '0';
           } else {
+            if (!mountRef.current) return;
             const x_screen = (tempV.x *  .5 + .5) * mountRef.current.clientWidth;
-            const y_screen = (tempV.y * -.5 + .5) * mountRef.current.clientHeight;
             meshGroup.label.style.left = `${x_screen}px`;
+
+            if (!mountRef.current) return;
+            const y_screen = (tempV.y * -.5 + .5) * mountRef.current.clientHeight;
             meshGroup.label.style.top = `${y_screen}px`;
           }
         } else {
