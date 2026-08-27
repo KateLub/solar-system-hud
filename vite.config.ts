@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),  ],
+    base: '/solar-system-hud/',
     server: {
     watch: {
       usePolling: true,
