@@ -1,4 +1,5 @@
 import "./feedAlpha.css";
+import alphaImage from "./14374912.png";
 
 export default function FeedAlpha() {
   return (
@@ -8,7 +9,7 @@ export default function FeedAlpha() {
         <span className="alpha-cyan-text2">LIVE</span>
       </div>
       <div className="orbital-feed-content">
-          <img src="src\components\rightTable\14374912.png" className = "orbital-feed-image" alt="Wired Reference Uploaded" />
+          <img src={alphaImage} className = "orbital-feed-image" alt="Wired Reference Uploaded" />
         <div className="orbital-feed-grid"></div>
         <div className="orbital-feed-location">SYS.LOC: ORB.BETA</div>
       </div>

@@ -1,4 +1,6 @@
 import "./feedBeta.css";
+import betaImage from "./Screenshot 2026-06-29 151907.png";
+
 
 export default function FeedBeta(){
     return (
@@ -8,7 +10,7 @@ export default function FeedBeta(){
               <span className="beta-orange-text2">MONITOR</span>
             </div>
             <div className="subpanel2">
-                <img src="src\components\rightTable\Screenshot 2026-06-29 151907.png" className = "image" alt="Thermal Diagnostic Feed" />
+                <img src={betaImage} className = "image" alt="Thermal Diagnostic Feed" />
               <div className="subpanel3"></div>
               <div className="overlay-text">SYS.STAT: WARN_LVL_1</div>
               
