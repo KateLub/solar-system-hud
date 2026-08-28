@@ -296,7 +296,7 @@ export default function Scene({ data}: any) {
     };
 
     function updateTelemetry() {
-      const panel = document.getElementById('telemetry-panel')!;
+      const panel = document.getElementById('target-panel')!;
       if (!panel) return;
       if (selectedPlanetId.current === "10") {
         // Sun selected
@@ -405,8 +405,7 @@ export default function Scene({ data}: any) {
     selectedPlanetId.current = id;
     //populatePlanetList();
     updateCameraTracking();
-    updateTelemetry();
-    
+    updateTelemetry();    
     // Update camera mode text
     const camModeText = document.getElementById('cam-mode')!;
     if (id === "10") {
