@@ -14,6 +14,17 @@ body {
   user-select: none;
 }
 
+  .scanlines{
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.4) 0.5px,
+      transparent 4px
+    );
+    pointer-events: none;
+  }
+
 #root {
     flex: 1;
     display: flex;

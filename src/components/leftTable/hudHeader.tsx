@@ -22,7 +22,6 @@ export default function HUDHeader() {
       NASA JPL EPHEMERIS TELEMETRY HUD
     </div>
 
-    <div className="scanlines"></div>
   </div>
   </div>
   )};
